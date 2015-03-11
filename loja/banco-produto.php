@@ -13,4 +13,10 @@
         $resultadoDaInsercao = mysqli_query($conexao, $query);
         return $resultadoDaInsercao;
     }
+
+    function removeProduto($conexao, $id){
+        $query = "delete from produtos where id = {$id}";
+        $resultadoDaDelecao = mysqli_query($conexao, $query);
+        return $resultadoDaDelecao;
+    }
 ?>
