@@ -11,6 +11,9 @@
                     <td><input type="number" name="preco" class="form-control" /></td>
                 </tr>
                 <tr>
+                    <td><textarea name="descricao" class="form-control"></textarea></td>
+                </tr>
+                <tr>
                     <td><input type="submit" value="Cadastrar" class="btn btn-primary" /></td>
                 </tr>
             </table>

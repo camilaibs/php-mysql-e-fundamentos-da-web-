@@ -1,9 +1,10 @@
 <?php include("cabecalho.php") ;?>
 <?php include("banco-produto.php") ;?>
     <?php
-        $nome = $_GET["nome"];
-        $preco = $_GET["preco"];
-        
+        $nome = $_POST["nome"];
+        $preco = $_POST["preco"];
+        $descricao = $_POST['descricacao'];
+
         $conexao = mysqli_connect('localhost', 'root', '', 'loja');
         if(insereProduto($conexa, $nome, $preco){
     ?>
