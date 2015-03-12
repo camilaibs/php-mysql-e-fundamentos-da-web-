@@ -1,16 +1,16 @@
-<?php include("cabecalho.php"); ?>
-<?php include("conecta.php"); ?>
-<?php include("banco-produto.php"); ?>
-    <?php if(array_key_exists("removido", $_GET) && $_GET['removido']=='true'){ ?>
+<?php
+    include("cabecalho.php");
+    include("conecta.php");
+    include("banco-produto.php");
+    if(array_key_exists("removido", $_GET) && $_GET['removido']=='true'){
+?>
         <p class="alert-success">Produto apagado com sucesso.</p>
-    <?php } ?>
-    <?php
-        $produtos = listaProdutos($conexao);
-    ?>
+<?php
+    }
+    $produtos = listaProdutos($conexao);
+?>
     <table class="table table-striped table-bordered"
-    <?php
-        foreach($produtos as $produto) :git 
-    ?>
+    <?php foreach($produtos as $produto) : ?>
         <tr>
             <td><?= $produto['nome'] ?></td>
             <td><?= $produto['preco'] ?></td>
@@ -21,9 +21,10 @@
                     <button class="btn btn-danger">remover</button>
                 </form>
             </td>
+            <td>
+                <tr><?= $produto['categoria_nome'] ?></tr>
+            </td>
         </tr>
-    <?php
-        endforeach
-    ?>
+    <?php endforeach ?>
     </table>
 <?php include("rodape.php"); ?>
