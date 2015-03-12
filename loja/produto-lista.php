@@ -16,16 +16,21 @@
             <td><?= $produto['preco'] ?></td>
             <td><?= substr($produto['descricao'], 0, 15) ?></td>
             <td>
+                <?= $produto['usado'] ?>
+            </td>
+            <td>
+                <tr><?= $produto['categoria_nome'] ?></tr>
+            </td>
+            <td>
                 <form action="remove-produto.php" method="post">
                     <input type="hidden" nome="id" value="<?= $produto['id'] ?>" />
                     <button class="btn btn-danger">remover</button>
                 </form>
             </td>
             <td>
-                <?= $produto['usado'] ?>
-            </td>
-            <td>
-                <tr><?= $produto['categoria_nome'] ?></tr>
+                <tr>
+                    <a class="btn btn-primary" href="produto-altera-formulario.php?id=<?= $produto['id'] ?>">alterar</a>
+                </tr>
             </td>
         </tr>
     <?php endforeach ?>
