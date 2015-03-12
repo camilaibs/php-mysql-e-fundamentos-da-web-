@@ -23,10 +23,19 @@
                     <td><input type="submit" value="Cadastrar" class="btn btn-primary" /></td>
                 </tr>
                 <tr>
+                    <td><input type="checkbox" name="usado" value="true"> Usado</td>
+                </tr>
+                <tr>
                     <td>
-                        <?php foreach($categoria as $categorias) : ?>
+                        <!--
                             <input type="radio" name="categoria_id" value="<?= $categoria['id']?>"><?= categoria['nome'] ?></br>
+                        -->
+                        <select name="categoria_id">
+                        <?php foreach($categoria as $categorias) : ?>
+                            <option value="<?= $categoria['id'] ?>"><?= $categoria['nome'] ?></option>
                         <? endforeach ?>
+                        </select>
+                        
                     </td>
                 </tr>
             </table>

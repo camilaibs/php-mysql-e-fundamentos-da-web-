@@ -22,6 +22,9 @@
                 </form>
             </td>
             <td>
+                <?= $produto['usado'] ?>
+            </td>
+            <td>
                 <tr><?= $produto['categoria_nome'] ?></tr>
             </td>
         </tr>
