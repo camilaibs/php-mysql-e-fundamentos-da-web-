@@ -1,4 +1,3 @@
-pega os valores do formulário e invoca a função de alterar 
 <?php
     include("cabecalho.php");
     include("conecta.php");

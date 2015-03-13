@@ -1,10 +1,10 @@
 <?php
-    include('cabecalho.php');
-    include('conecta.php');
-    include('banco-produto');
-    include('banco-categoria');
+    include("cabecalho.php");
+    include("conecta.php");
+    include("banco-produto.php");
+    include("banco-categoria.php");
 
-    $id = $_GET['id'];
+    $id = $_GET["id"];
     $produto = buscaProduto($conexao, $id);
     $categorias = listaCategorias($conexao);
 ?>
@@ -51,4 +51,4 @@
             </tr>
         </table>
     </form>
-<?php include('rodape.php') ?>
+<?php include("rodape.php"); ?>

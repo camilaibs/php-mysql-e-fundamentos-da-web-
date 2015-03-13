@@ -35,9 +35,8 @@
                             <option value="<?= $categoria['id'] ?>"><?= $categoria['nome'] ?></option>
                         <? endforeach ?>
                         </select>
-                        
                     </td>
                 </tr>
             </table>
         </form>
-<?php include("rodape.php") ;?>
+<?php include("rodape.php"); ?>

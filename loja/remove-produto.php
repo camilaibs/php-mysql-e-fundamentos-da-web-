@@ -1,17 +1,15 @@
 <?php
-include("cabecalho.php");
-include("conecta.php");
-include("banco-produto.php");
+    include("cabecalho.php");
+    include("conecta.php");
+    include("banco-produto.php");
 
-$id = $_GET['id'];
-removeProduto($conexao, $id);
+    $id = $_GET['id'];
+    removeProduto($conexao, $id);
 
-header("Location: produto-lista.php?removido=true");
-die();
+    header("Location: produto-lista.php?removido=true");
+    die();
 ?>
 
 <p class="text-success">Produto <?=$id?> removido!</p>
 
-<?php
-include("rodape.php");
-?>
+<?php include("rodape.php"); ?>
