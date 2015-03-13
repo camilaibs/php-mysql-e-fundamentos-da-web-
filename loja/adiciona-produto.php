@@ -1,11 +1,15 @@
 <?php
     include("cabecalho.php");
     include("banco-produto.php");
+    include("logica-usuario.php");
+
+    verificaUsuario();
+
     $nome = $_POST["nome"];
     $preco = $_POST["preco"];
     $descricao = $_POST["descricao"];
     $categoria_id = $_POST["categoria_id"];
-    $usado = $_POST['usado'];
+    $usado = $_POST["usado"];
     if(array_key_exists('usado', $_POST)){
         $usado = "true";
     }else{

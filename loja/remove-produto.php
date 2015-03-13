@@ -9,7 +9,5 @@
     header("Location: produto-lista.php?removido=true");
     die();
 ?>
-
 <p class="text-success">Produto <?=$id?> removido!</p>
-
 <?php include("rodape.php"); ?>
